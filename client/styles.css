@@ -1,0 +1,187 @@
+/* Base Theme */
+body {
+  background-color: #ffe6f0;
+  font-family: 'Nunito', sans-serif;
+  color: #4a0033;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #ff69b4;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #ffe6f0;
+}
+
+/* Header */
+.site-header {
+  padding: 20px;
+  background: #ffc0cb;
+  border-bottom: 1px solid #f4a6b9;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.site-logo {
+  height: 75px;
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #8b005d;
+}
+
+/* Anime Cards */
+.anime-card {
+  background: #ffd1dc;
+  border: 1px solid #ff99bb;
+  padding: 15px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.anime-card:hover {
+  transform: scale(1.03);
+}
+
+.anime-card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.anime-card h3 {
+  margin: 5px 0;
+}
+
+/* Results Grid */
+#results,
+#saved-anime {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Recommendation Page */
+.recommend-container {
+  padding: 30px;
+  text-align: center;
+}
+
+.selector-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+#genre-select {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+/* Home Page */
+.home-container {
+  text-align: center;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.home-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #d1006f;
+}
+
+.home-buttons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* About & Features */
+.features li,
+.about-section li {
+  border-bottom: 1px solid #f4a6b9;
+}
+
+/* Buttons */
+button {
+  background-color: #ff69b4;
+}
+
+.cta-button,
+.secondary-button,
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* Primary Pink Button */
+.cta-button,
+button {
+  background-color: #ff69b4;
+  color: white;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+.cta-button:hover,
+button:hover {
+  background-color: #ff4da6;
+  box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Secondary Light Button */
+.secondary-button {
+  background-color: #ffe6f0;
+  color: #8b005d;
+  border: 2px solid #ff69b4;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
+}
+
+.secondary-button:hover {
+  background-color: #ffd1dc;
+  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.5);
+  transform: translateY(-2px);
+}
+
+.chart-wrapper {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  height: 200px;
+  position: relative;
+}

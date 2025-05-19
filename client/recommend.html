@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anime of the Day | Recommendations</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <h1>Anime of the Day</h1>
+      <img src="https://www.pngarts.com/files/18/Goku-Free-PNG-Image.png" alt="Anime Recommender Logo" class="site-logo">
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="recommend.html">Recommendations</a>
+    <a href="favorites.html">Favorites</a>
+  </nav>
+
+<div id="chart-section"></div>
+
+
+  <main class="recommend-container">
+    <h2>Choose a Genre to Discover Anime</h2>
+    <div class="selector-block">
+      <select id="genre-select">
+        <option value="1">Action</option>
+        <option value="2">Adventure</option>
+        <option value="4">Comedy</option>
+        <option value="7">Mystery</option>
+        <option value="8">Drama</option>
+        <option value="10">Fantasy</option>
+        <option value="11">Game</option>
+        <option value="14">Horror</option>
+        <option value="22">Romance</option>
+        <option value="24">Sci-Fi</option>
+        <option value="27">Shounen</option>
+        <option value="30">Sports</option>
+        <option value="37">Supernatural</option>
+      </select>
+      <button onclick="getRecommendations()">Search</button>
+    </div>
+
+    <div id="results" class="results-grid"></div>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../scripts/recommend.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
