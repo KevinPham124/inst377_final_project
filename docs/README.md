@@ -54,5 +54,65 @@ Below is the full developer manual on how to install and run everything.
 
    Then open browser and navigate to
    http://localhost:3000/recommend.html
-   
 
+5. Bugs
+
+   Problem 1: CORS Policy Blocked file:///
+   You're trying to fetch data from a local file system using this URL:
+
+   perl
+   Copy
+   Edit
+   file:///C:/api/anime
+   But browsers block fetch requests to file:// URLs for security reasons. That's what this part of the error means:
+
+   Cross origin requests are only supported for protocol schemes: chrome, chrome-extension, chrome-untrusted, data, http, https, isolated-app.
+
+   Problem 2: TypeError: Failed to fetch
+   Because the browser blocks that file:/// request, your JavaScript fetch call fails, resulting in this:
+
+   js
+   Copy
+   Edit
+   TypeError: Failed to fetch
+   This is a consequence of the CORS issue.
+
+   🛠️ How to Fix This
+   You must run your app from a local server — not by opening the .html file directly. Here's how:
+
+   Option 1: Use VS Code with Live Server
+   Open your project in VS Code.
+
+   Install the Live Server extension if you haven’t already.
+
+   Right-click on recommend.html and select "Open with Live Server".
+
+   Your site will open at something like:
+
+   arduino
+   Copy
+   Edit
+   http://127.0.0.1:5500/recommend.html
+   Now your fetch URLs like /api/anime will resolve correctly.
+
+   Option 2: Use Node.js/Express
+   If you're already using Node and Express (as your backend), make sure your frontend files are served using Express:
+
+   js
+   Copy
+   Edit
+   // server.js or index.js
+   const express = require('express');
+   const app = express();
+   const path = require('path');
+
+   app.use(express.static('public')); // serve your frontend
+   app.use('/api/anime', require('./routes/animeRoute.js')); // your API route
+
+   app.listen(3000, () => console.log('Server running at http://localhost:3000'));
+   Then open:
+
+   bash
+   Copy
+   Edit
+   http://localhost:3000/recommend.html
