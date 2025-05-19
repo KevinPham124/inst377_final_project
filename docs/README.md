@@ -50,6 +50,8 @@ Below is the full developer manual on how to install and run everything.
 4. To run locally
    ```npm start
 
+   Make sure HTML, JavaScript, and CSS are under the directory "client/"
+
    Then open browser and navigate to
    http://localhost:3000/recommend.html
    
