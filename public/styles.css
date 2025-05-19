@@ -43,13 +43,18 @@ body {
 
 .site-logo {
   height: 75px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
+
 .site-header h1 {
-  font-size: 2rem;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 4rem;
   margin: 0;
   color: #8b005d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Anime Cards */
 .anime-card {
@@ -131,6 +136,7 @@ body {
 .about-section li {
   border-bottom: 1px solid #f4a6b9;
 }
+
 
 /* Buttons */
 button {
