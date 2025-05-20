@@ -30,6 +30,7 @@ Below is the full developer manual on how to install and run everything.
 - **npm**
 - **Supabase account** (set up your own project and get API keys)
 - A browser with JavaScript enabled
+- **Vercel Deployment** inst377-final-project-3uf3ml0lj-kevin-phams-projects-d7ae3ed.vercel.app
 
 ---
 
